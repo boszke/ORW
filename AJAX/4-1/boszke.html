@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+  <head>
+    <title>Ajax. Kurs od podstaw. Część pierwsza: Wprowadzenie. Przykład #4.1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <style type="text/css">
+    #tresc {
+        width: 300px;
+		/* kropkowana ramka */
+        border: 4px dotted aqua;
+        padding: 10px;
+		/* zmiana koloru tła */
+        background: lime;        
+    }
+    #minitresc {
+        display: none;
+        padding: 5px;
+    }
+    #ikona {
+        width: 20px;
+        font-family: "Courier New", monospace;
+        text-decoration: none;
+    }
+    </style>
+    
+<script type="text/javascript">
+
+var expanded = false;
+
+function expandCollapse()
+{
+    if (expanded) {
+        expanded = false;
+        document.getElementById('minitresc').style.display = 'none';        
+        document.getElementById('ikona').innerHTML = '+';
+    } else {
+        expanded = true;
+        document.getElementById('minitresc').style.display = 'block';                
+        document.getElementById('minitresc').innerHTML = 'Michał Boszke';
+        document.getElementById('ikona').innerHTML = '-';        
+    }
+}
+
+</script>    
+    
+    
+  </head>
+<body>
+
+<div id="tresc">
+<a id="ikona" href="#" onclick="expandCollapse();">+</a>
+Imię i Nazwisko:
+<div id="minitresc"></div>
+</div>
+
+</body>
+</html>

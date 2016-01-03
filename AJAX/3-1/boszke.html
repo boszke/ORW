@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+  <head>
+    <title>Ajax. Kurs od podstaw. Część pierwsza: Wprowadzenie. Przykład #3.1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+<body>
+
+
+<div id="tresc"></div>
+<button type="button" onclick="prawo()">Przesuń w prawo</button>
+<button type="button" onclick="lewo()">Przesuń w lewo</button>
+<button type="button" onclick="srodek()">Przesuń na środek</button>
+
+<script type="text/javascript">
+
+var el;
+
+el = document.getElementById('tresc');
+el.innerHTML = '<strong>Autor:</strong> Michał Boszke...';
+el.style.border = '2px solid yellow';
+//zmieniłem kolor tła
+el.style.background = '#f00';
+//kolor czcionki
+el.style.color = '#ff0';
+//centrowanie tekstu
+el.style.textAlign = 'center';
+
+function prawo() {
+    document.getElementById("tresc").style.textAlign = "right";
+}
+function lewo() {
+    document.getElementById("tresc").style.textAlign = "left";
+}
+function srodek() {
+    document.getElementById("tresc").style.textAlign = "center";
+}
+
+</script>    
+
+
+</body>
+</html>
+
