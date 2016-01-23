@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>WebApi Demo</title>
+</head>
+<body>
+ 
+  <div>
+    <h2>Pełna lista</h2>
+    <ul id="oceny" />
+  </div>
+    <div>
+        <form id="saveOcenaForm" method="post">
+            <h3>Dodaj Ocenę</h3>
+            <p>
+                <label for="ocenaId">Id ucznia:</label>
+                <input type="text" name="Id" />
+            </p>
+            <p>
+                <label for="ocenaName">Nazwisko ucznia:</label>
+                <input type="text" name="Nazwisko" />
+            </p>
+            <p>
+                <label for="ocenaOcena">Ocena:</label>
+                <input type="text" name="Ocena" />
+            </p>
+            <input type="button" id="saveOcena" value="Dodaj" />
+        </form>
+    </div>
+ 
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+  <script>
+      var uri = 'api/Oceny';
+
+      $(document).ready(function () {
+          // wysyła żądanie AJAX 
+          $.getJSON(uri)
+              .done(function (data) {
+                  // Przy sukcenie zwraca data z pełną listą książke.
+                  $.each(data, function (key, item) {
+                      // dodaje listę do widoku do elementu books.
+                      $('<li>', { text: formatItem(item) }).appendTo($('#oceny'));
+                  });
+              });
+      });
+
+      function formatItem(item) {
+          return item.Id + ' - ' + item.Nazwisko + ': ' + item.Ocena;
+      }   
+
+      //zapis książki
+      $('#saveOcena').click(function () {
+          $.post("api/Oceny",
+                $("#saveOcenaForm").serialize(),
+                function (value) {
+                        //$('#books').append('<li>' + value.Title + '</li>');
+                        //$('<li>', { text: formatItem(item) }).appendTo($('#books'));
+                    $('#oceny').append('<li>' + value.Id + ' - ' + value.Nazwisko + ': ' + value.Ocena + '</li>');
+                    },
+                "json"
+          );
+      });
+  </script>
+</body>
+</html>

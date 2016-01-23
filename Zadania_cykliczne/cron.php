@@ -1,4 +1,4 @@
-<?
+<?php
 
 $fp = fopen("Cron/testFile.txt", "r");
 $stareDane = fread($fp, filesize("Cron/testFile.txt"));

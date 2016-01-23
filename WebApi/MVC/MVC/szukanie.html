@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>WebApi Demo</title>
+</head>
+<body>
+ 
+  <div>
+    <h2>Pełna lista</h2>
+    <ul id="osoby" />
+  </div>
+  <div>
+    <h2>Szukaj po ID</h2>
+    <input type="text" id="osobaId" size="5" />
+    <input type="button" value="Szukaj" onclick="find();" />
+    <p id="osoba" />
+  </div>
+ 
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+  <script>
+      var uri = 'api/Osoby';
+      var uriszukaj = 'api/Oceny';
+
+      $(document).ready(function () {
+          // wysyła żądanie AJAX 
+          $.getJSON(uriszukaj)
+              .done(function (data) {
+                  // Przy sukcenie zwraca data z pełną listą książke.
+                  $.each(data, function (key, item) {
+                      // dodaje listę do widoku do elementu books.
+                      $('<li>', { text: formatItem(item) }).appendTo($('#osoby'));
+                  });
+              });
+      });
+
+      function formatItem(item) {
+          return item.Nazwisko + ': ' + item.Ocena;
+      }
+
+      function find() {
+          var id = $('#osobaId').val();
+          $.getJSON(uri + '/' + id)
+              .done(function (data) {
+                  $('#osoba').text(formatItem(data));
+              })
+              .fail(function (jqXHR, textStatus, err) {
+                  $('#osoba').text('Error: ' + err); 
+              });
+      }
+  </script>
+</body>
+</html>
