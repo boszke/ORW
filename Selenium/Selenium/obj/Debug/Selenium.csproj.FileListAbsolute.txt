@@ -1,0 +1,12 @@
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\bin\Debug\Selenium.exe.config
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\bin\Debug\Selenium.exe
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\bin\Debug\Selenium.pdb
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\bin\Debug\WebDriver.dll
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\bin\Debug\WebDriver.Support.dll
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\bin\Debug\WebDriver.xml
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\bin\Debug\WebDriver.Support.xml
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\obj\Debug\Selenium.csprojResolveAssemblyReference.cache
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\obj\Debug\Selenium.exe
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\obj\Debug\Selenium.pdb
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\bin\Debug\nunit.framework.dll
+C:\Users\boszk_000\Documents\Visual Studio 2012\Projects\Selenium\Selenium\bin\Debug\nunit.framework.xml
